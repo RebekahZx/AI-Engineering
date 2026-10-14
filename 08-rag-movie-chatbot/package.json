@@ -1,0 +1,16 @@
+{
+  "name": "08-rag-movie-chatbot",
+  "description": "https://scrimba.com/the-ai-engineer-path-c02v/~021",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.38.1",
+    "openai": "4.12.3",
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
