@@ -12,6 +12,9 @@ They are my exercise solutions from the [Scrimba AI Engineer
 Path](https://scrimba.com/the-ai-engineer-path-c02v). Each folder links to its lesson,
 and the scaffolding (HTML, CSS, Vite setup) comes from the course.
 
+**New to this? Start with [GUIDE.md](GUIDE.md)**, a step-by-step path through the demos with
+what each one teaches, what to try, and common pitfalls.
+
 ## Projects
 
 | Folder | What it shows | Keys |
