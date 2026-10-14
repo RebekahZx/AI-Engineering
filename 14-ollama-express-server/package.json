@@ -1,0 +1,12 @@
+{
+  "name": "14-ollama-express-server",
+  "description": "https://scrimba.com/the-ai-engineer-path-c02v/~07uj",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ollama": "^0.5.11"
+  },
+  "type": "module"
+}

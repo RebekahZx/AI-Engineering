@@ -1,0 +1,48 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        demo:
+          - 01-openai-image-generation
+          - 02-openai-fine-tuning
+          - 03-langchain-text-chunking
+          - 04-openai-embeddings
+          - 05-supabase-vector-store
+          - 06-chunk-embed-store
+          - 07-rag-podcast-answer
+          - 08-rag-movie-chatbot
+          - 09-hf-find-models
+          - 10-hf-translation
+          - 11-hf-image-to-image
+          - 12-hf-text-to-speech
+          - 13-transformersjs-object-detection
+    defaults:
+      run:
+        working-directory: ${{ matrix.demo }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npx vite build
+  ollama-server:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 14-ollama-express-server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: node --check index.js
